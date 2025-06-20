@@ -29,11 +29,11 @@ const app = async (args) => {
           type: 'select',
           name: 'category',
           message: 'Select the type of project:',
-          choices: Object.keys(templateCategories).map(category => ({
+          choices: Object.keys(templateCategories).map((category) => ({
             title: setColor(category),
-            value: category
-          }))
-        }
+            value: category,
+          })),
+        },
       ]);
 
       if (!categoryResponse.category) {
@@ -46,10 +46,10 @@ const app = async (args) => {
         type: 'select',
         name: 'subcategory',
         message: `Select the technology for ${categoryResponse.category}:`,
-        choices: Object.keys(selectedCategory).map(subcategory => ({
+        choices: Object.keys(selectedCategory).map((subcategory) => ({
           title: setColor(subcategory),
-          value: subcategory
-        }))
+          value: subcategory,
+        })),
       });
 
       if (!subcategoryResponse.subcategory) {
@@ -63,8 +63,8 @@ const app = async (args) => {
           type: 'select',
           name: 'template',
           message: `Select the template for ${subcategoryResponse.subcategory}:`,
-          choices: templates
-        }
+          choices: templates,
+        },
       );
 
       if (!templateResponse.template) {
@@ -79,8 +79,8 @@ const app = async (args) => {
           initial: 'my-app',
           format: (val) => formatAppName(val),
           validate: (val) => validateAppName(val),
-        }
-      )
+        },
+      );
 
       if (!appNameResponse.appName) {
         process.exit(0);
@@ -92,7 +92,7 @@ const app = async (args) => {
       const sourceDir = path.resolve(
         fileURLToPath(import.meta.url),
         '../../templates',
-        `${template}`
+        `${template}`,
       );
 
       initialize(sourceDir, targetDirectory, appName);
@@ -108,7 +108,7 @@ const app = async (args) => {
       const sourceDir = path.resolve(
         fileURLToPath(import.meta.url),
         '../../templates',
-        `${template}`
+        `${template}`,
       );
 
       initialize(sourceDir, targetDirectory, appName);

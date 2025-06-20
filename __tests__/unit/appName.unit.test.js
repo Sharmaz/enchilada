@@ -18,7 +18,7 @@ describe('App name fuctions', () => {
   });
   test('validateAppName', () => {
     expect(validateAppName(appNameMock)).toBe(true);
-    expect(validateAppName('mkappcli')).toBe(true)
+    expect(validateAppName('mkappcli')).toBe(true);
 
     expect(validateAppName('$**[]__')).toContain('App name should not contain special characters except hyphen (-)');
     expect(validateAppName('my-app_app')).toContain('App name should not contain special characters except hyphen (-)');
