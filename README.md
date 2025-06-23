@@ -1,6 +1,6 @@
 <div align="center">
 <p>
-<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/chore/rebranding/media/enchilada-js-logo.svg" width="250" alt="enchiladajs logo"/>
+<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchilada-js-logo.svg" width="250" alt="enchiladajs logo"/>
 </p>
 
 # Building apps with JavaScript — as if they were enchiladas!
@@ -28,7 +28,7 @@ pnpm create enchilada
 yarn create enchilada
 ```
 
-<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/chore/rebranding/media/enchiladajs.gif"  width="100%"  alt="mk-app options"/>
+<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchiladajs.gif"  width="100%"  alt="mk-app options"/>
 </p>
 
 ## CLI Options

@@ -5,8 +5,7 @@ const templateCategories = {
     'VanillaJS': [
       {
         value: 'vanilla-js',
-        title: setColor('VanillaJS'),
-        description: colors.error('Vanilla JS + Vite.'),
+        title: `${setColor('VanillaJS')}${separator('VanillaJS')}${setUnderlineOff(colors.error('Vanilla JS + Vite.'))}`,
       },
     ],
     'React JavaScript': [

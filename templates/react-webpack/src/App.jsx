@@ -5,14 +5,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>React</h1>
+    <div className="container">
+      <img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchilada-js-logo.svg" width="250" alt="enchiladajs logo"/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          Enchiladas {count}
         </button>
       </div>
-    </>
+    </div>
   )
 }
 
