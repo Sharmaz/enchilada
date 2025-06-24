@@ -3,7 +3,7 @@ import {
   copyFileSync,
   lstatSync,
   mkdirSync,
-  readdirSync
+  readdirSync,
 } from 'node:fs';
 
 const copyFilesAndDirectories = (source, destination) => {

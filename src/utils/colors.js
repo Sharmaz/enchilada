@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import chalk from 'chalk';
 
 export const colors = {
   backend: chalk.hex('#3677FF'),
@@ -39,7 +39,7 @@ export function setColor (val) {
   if (valSplit.includes('React')) { return colors.react(val); }
   if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
 
-  return (val)
+  return (val);
 };
 
 export function setUnderlineOff(val) {

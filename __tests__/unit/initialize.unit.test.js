@@ -15,7 +15,7 @@ describe('Initialize app', () => {
     expect(packageJson).toContain(appNameMock);
   });
   test('Attempt directory alread exist', () => {
-    mkdirSync(genPath, { recursive: true })
+    mkdirSync(genPath, { recursive: true });
     copyFilesAndDirectories(sourcePath, genPath);
     initialize(sourcePath, genPath, appNameMock);
   

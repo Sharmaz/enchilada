@@ -3,10 +3,10 @@ export default {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   transformIgnorePatterns: [
-    '[/\\\\\\\\]node_modules[/\\\\\\\\].+\\\\.(js|ts)$'
+    '[/\\\\\\\\]node_modules[/\\\\\\\\].+\\\\.(js|ts)$',
   ],
   transform: {},
   coveragePathIgnorePatterns: [
-    "/node_modules/"
+    '/node_modules/',
   ],
-}
+};

@@ -1,12 +1,11 @@
-import { colors, setColor, separator, setUnderlineOff} from './utils/colors';
+import { colors, setColor, separator, setUnderlineOff } from './utils/colors';
 
 const templateCategories = {
   'Frontend': {
     'VanillaJS': [
       {
         value: 'vanilla-js',
-        title: setColor('VanillaJS'),
-        description: colors.error('Vanilla JS + Vite.'),
+        title: `${setColor('VanillaJS')}${separator('VanillaJS')}${setUnderlineOff(colors.error('Vanilla JS + Vite.'))}`,
       },
     ],
     'React JavaScript': [
@@ -36,7 +35,7 @@ const templateCategories = {
         value: 'react-dev-typescript',
         title:  `${setColor('React Dev TypeScript')}${separator('React Dev TypeScript')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
       },
-    ]
+    ],
   },
   'Backend': {
     'NodeJS': [
@@ -44,8 +43,8 @@ const templateCategories = {
         value: 'node-express',
         title:  `${setColor('Node Express')}${separator('Node Express')}${setUnderlineOff(colors.error('Express + Sequelize + Linter + Tests'))}`,
       },
-    ]
-  }
-}
+    ],
+  },
+};
 
 export default templateCategories;
