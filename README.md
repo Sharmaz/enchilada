@@ -15,12 +15,12 @@
 ## Usage
 ### With npm
 ```
-npm create enchilada
+npm create enchilada@latest
 ```
 
 ### With pnpm
 ```
-pnpm create enchilada
+pnpm create enchilada@latest
 ```
 
 ### With yarn
