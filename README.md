@@ -28,7 +28,7 @@ pnpm create enchilada@latest
 yarn create enchilada
 ```
 
-<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchiladajs.gif"  width="100%"  alt="mk-app options"/>
+<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchiladajs@latest.gif"  width="100%"  alt="enchiladajs logo"/>
 </p>
 
 ## CLI Options
