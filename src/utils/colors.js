@@ -4,13 +4,13 @@ export const colors = {
   backend: chalk.hex('#3677FF'),
   frontend: chalk.hex('#6DC6FE'),
   vanilla: chalk.hex('#EEC900'),
-  react: chalk.hex('3B89E0'),
-  typescript: chalk.hex('30B3ED'),
-  ok: chalk.hex('30ED86'),
-  error: chalk.hex('ED3066'),
-  info: chalk.hex('42ECDE'),
+  react: chalk.hex('#3B89E0'),
+  typescript: chalk.hex('#30B3ED'),
+  ok: chalk.hex('#30ED86'),
+  error: chalk.hex('#ED3066'),
+  info: chalk.hex('#42ECDE'),
   gray: chalk.hex('#686868'),
-  vue: chalk.hex('54E6A5'),
+  vue: chalk.hex('#54E6A5'),
   warn: chalk.hex('#EC9942'),
   webpack: chalk.hex('#75AFCC'),
   node: chalk.hex('#417E38'),
@@ -35,9 +35,11 @@ export function setColor (val) {
   if (val === 'NodeJS') { return colors.node(val);}
   if (valSplit.includes('Node')) { return colors.node(val); }
   if (valSplit.includes('JavaScript')) { return colors.react(val); }
+  if (valSplit.includes('Rspack')) { return colors.rust(val); }
+  if (valSplit.includes('Rust')) { return colors.rust(val); }
+  if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
   if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
   if (valSplit.includes('React')) { return colors.react(val); }
-  if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
 
   return (val);
 };

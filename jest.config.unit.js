@@ -5,4 +5,7 @@ export default {
   testMatch: ['**/*.unit.test.{js,ts}'],
   collectCoverageFrom: ['**/src/**/*.js'],
   coverageDirectory: 'coverage/unit',
+  coveragePathIgnorePatterns: [
+    '/templates/',
+  ],
 };

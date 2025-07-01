@@ -64,4 +64,5 @@ npm create enchilada -- --template vanilla-js my-app
 | **react-dev**             | React + Vite + Tailwind CSS + ESlint + React Testing Library |
 | **react-dev-typescript**  | React + Typescript + Vite + Tailwind CSS + ESlint + React Testing Library |
 | **react-dev-webpack**     | React + Webpack + Tailwind CSS + ESlint + React Testing Library |
+| **react-rspack**          | React + Rspack |
 | **node-express**          | NodeJS + Express + Sequelize + ESlint + Jest |

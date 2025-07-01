@@ -19,6 +19,7 @@ Available templates:
   react-dev-webpack         Tailwind + Linter + Tests
   react-typescript          React + Vite + TypeScript
   react-dev-typescript      Tailwind + Linter + Tests
+  react-rspack              React + Rspack
   node-express              Express + Sequelize + Linter + Tests
 `;
 export default helpMessage;

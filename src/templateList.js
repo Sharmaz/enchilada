@@ -36,6 +36,12 @@ const templateCategories = {
         title:  `${setColor('React Dev TypeScript')}${separator('React Dev TypeScript')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
       },
     ],
+    'React Rust': [
+      {
+        value: 'react-rspack',
+        title: `${setColor('React Rspack')}${separator('React Rspack')}${setUnderlineOff(colors.error('React + Rspack'))}`,
+      },
+    ],
   },
   'Backend': {
     'NodeJS': [

@@ -1,12 +1,13 @@
 {
   "name": "create-enchilada",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "A quick way to start your web applications.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "build": "rollup --config",
+    "dev": "rollup --config --watch",
     "cov:clean": "rimraf .nyc_output && rimraf coverage",
     "cov:unit": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit --colors --detectOpenHandles -c jest.config.unit.js",
     "test:unit": "npm-run-all cov:clean cov:unit",
