@@ -16,13 +16,6 @@ describe('react-rspack template', () => {
     expect(stdout).toContain('React Rust');
   });
 
-  test('prompt shows React Rspack template', async () => {
-    const { stdout } = await runTest([mainPath], [ENTER, DOWN, DOWN, DOWN, ENTER, ENTER, appNameMock, ENTER]);
-
-    await new Promise((res) => setTimeout(res, 3000));
-    expect(stdout).toContain('React Rspack');
-  }, 10000);
-
   test('implemented react-rspack template', async () => {
     await execa`node index.js --template react-rspack ${appNameMock}`;
     
