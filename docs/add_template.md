@@ -12,6 +12,9 @@
 ## The new template
 The new templates are placed in the `./templates` folder.
 
+<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/add_new_template.png"  width="50%"  alt="templates folder"/>
+</p>
+
 It is important to have a concise and descriptive name, this name acts as an identifier. Example: `react-rspack`.
 
 In this example to add a new template to the list, you need to select the `Frontend` category. In addition, we will create a subcategory. `React Rust`, and inside we will add the template name as a `value` in the `./src/templateList.js` file. As a `title`, we add the name `React Rspack` with the description `React + Rspack`. Using the `setColor` and `separator` utilities.
