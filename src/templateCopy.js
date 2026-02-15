@@ -17,13 +17,17 @@ const copyFilesAndDirectories = (source, destination) => {
       destPath = path.join(destination, '.gitignore');
     }
 
-    const stat = lstatSync(sourcePath);
+    try {
+      const stat = lstatSync(sourcePath);
 
-    if (stat.isDirectory()) {
-      mkdirSync(destPath);
-      copyFilesAndDirectories(sourcePath, destPath);
-    } else {
-      copyFileSync(sourcePath, destPath);
+      if (stat.isDirectory()) {
+        mkdirSync(destPath, { recursive: true });
+        copyFilesAndDirectories(sourcePath, destPath);
+      } else {
+        copyFileSync(sourcePath, destPath);
+      }
+    } catch (error) {
+      throw new Error(`Failed to copy ${sourcePath} to ${destPath}`, { cause: error });
     }
   });
 };

@@ -26,7 +26,6 @@ async function initialize(sourcePath, destinationPath, name) {
   console.info(`🚀 ${colors.ok(`Finished generating your app ${colors.error(name)}`)}`);
   console.info(`🏠 ${colors.info(`cd ${name}`)}`);
   console.info(`🧪 ${colors.info('npm install')}`);
-
 }
 
 export default initialize;
