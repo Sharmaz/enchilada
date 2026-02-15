@@ -11,7 +11,7 @@ describe('Copying Files', () => {
   test('Copying template files to directory', () => {
     copyFilesAndDirectories(sourcePath, genPath);
     const templateFiles = readdirSync(genPath);
-  
+
     expect(templateFiles.length).toBeGreaterThan(1);
   });
 });

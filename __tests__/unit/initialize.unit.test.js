@@ -10,7 +10,7 @@ afterEach(() => rmSync(genPath, { recursive: true, force: true }));
 describe('Initialize app', () => {
   test('Create a new app', () => {
     initialize(sourcePath, genPath, appNameMock);
-    
+
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain(appNameMock);
   });
@@ -18,7 +18,7 @@ describe('Initialize app', () => {
     mkdirSync(genPath, { recursive: true });
     copyFilesAndDirectories(sourcePath, genPath);
     initialize(sourcePath, genPath, appNameMock);
-  
+
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain('vanilla-js');
   });

@@ -26,7 +26,7 @@ export function separator(title) {
   return chalk.reset(colors.gray(`${' '.repeat(gutter)}|${' '.repeat(2)}`));
 }
 
-export function setColor (val) {
+export function setColor(val) {
   const valSplit = val.split(' ');
 
   if (val === 'Frontend') { return colors.frontend(val); }

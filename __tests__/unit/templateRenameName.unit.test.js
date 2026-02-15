@@ -12,7 +12,7 @@ describe('App name in package.json', () => {
   test('Changing the app name in template package.json file', () => {
     copyFilesAndDirectories(sourcePath, genPath);
     renamePackageJsonName(genPath, appNameMock);
-  
+
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain(appNameMock);
   });

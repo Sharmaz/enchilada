@@ -8,7 +8,6 @@ beforeAll(() => rm(genPath, { recursive: true, force: true }));
 afterEach(() => rm(genPath, { recursive: true, force: true }));
 
 describe('react-rspack template', () => {
-
   test('prompt shows React Rust', async () => {
     const { exitCode, stdout } = await runTest([mainPath], [ENTER, DOWN, DOWN, DOWN]);
 
@@ -18,7 +17,7 @@ describe('react-rspack template', () => {
 
   test('implemented react-rspack template', async () => {
     await execa`node index.js --template react-rspack ${appNameMock}`;
-    
+
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain('rspack');
   });

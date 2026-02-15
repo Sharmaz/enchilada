@@ -3,7 +3,6 @@ import { join } from 'node:path';
 
 import templateCategories from '../../src/templateList';
 
-
 const dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const mainPath = join(dirname, '../..');
 const appNameMock = 'test-app';

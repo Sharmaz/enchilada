@@ -97,7 +97,7 @@ const app = async (args) => {
 
       initialize(sourceDir, targetDirectory, appName);
     }
-    catch(err) {
+    catch (err) {
       console.error(colors.error(err.message));
     }
   } else {
@@ -113,7 +113,7 @@ const app = async (args) => {
 
       initialize(sourceDir, targetDirectory, appName);
     }
-    catch(err) {
+    catch (err) {
       console.error(colors.error(err.message));
     }
   }

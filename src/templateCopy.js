@@ -25,7 +25,6 @@ const copyFilesAndDirectories = (source, destination) => {
     } else {
       copyFileSync(sourcePath, destPath);
     }
-
   });
 };
 

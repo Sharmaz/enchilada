@@ -15,7 +15,7 @@ const templateCategories = {
       },
       {
         value: 'react-dev',
-        title:  `${setColor('React Dev')}${separator('React Dev')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
+        title: `${setColor('React Dev')}${separator('React Dev')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
       },
       {
         value: 'react-webpack',
@@ -29,11 +29,11 @@ const templateCategories = {
     'React TypeScript': [
       {
         value: 'react-typescript',
-        title:  `${setColor('React TypeScript')}${separator('React TypeScript')}${setUnderlineOff(colors.error('React + Vite + TypeScript'))}`,
+        title: `${setColor('React TypeScript')}${separator('React TypeScript')}${setUnderlineOff(colors.error('React + Vite + TypeScript'))}`,
       },
       {
         value: 'react-dev-typescript',
-        title:  `${setColor('React Dev TypeScript')}${separator('React Dev TypeScript')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
+        title: `${setColor('React Dev TypeScript')}${separator('React Dev TypeScript')}${setUnderlineOff(colors.error('Tailwind + Linter + Tests'))}`,
       },
     ],
     'React Rust': [
@@ -47,7 +47,7 @@ const templateCategories = {
     'NodeJS': [
       {
         value: 'node-express',
-        title:  `${setColor('Node Express')}${separator('Node Express')}${setUnderlineOff(colors.error('Express + Sequelize + Linter + Tests'))}`,
+        title: `${setColor('Node Express')}${separator('Node Express')}${setUnderlineOff(colors.error('Express + Sequelize + Linter + Tests'))}`,
       },
     ],
   },
