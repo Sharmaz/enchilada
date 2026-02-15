@@ -1,5 +1,5 @@
 import { afterEach, describe, test, expect } from '@jest/globals';
-import { readFileSync, rmSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, rmSync, mkdirSync } from 'node:fs';
 
 import copyFilesAndDirectories from '../../src/templateCopy';
 import initialize from '../../src/initialize';
@@ -14,12 +14,18 @@ describe('Initialize app', () => {
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain(appNameMock);
   });
-  test('Attempt directory alread exist', () => {
+  test('Attempt directory already exist', () => {
     mkdirSync(genPath, { recursive: true });
     copyFilesAndDirectories(sourcePath, genPath);
     initialize(sourcePath, genPath, appNameMock);
 
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain('vanilla-js');
+  });
+  test('Invalid template path does not create directory', () => {
+    const invalidSource = '/non/existent/template';
+    initialize(invalidSource, genPath, appNameMock);
+
+    expect(existsSync(genPath)).toBe(false);
   });
 });

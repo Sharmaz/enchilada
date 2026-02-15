@@ -16,4 +16,10 @@ describe('App name in package.json', () => {
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
     expect(packageJson).toContain(appNameMock);
   });
+
+  test('Handles missing package.json without throwing', () => {
+    expect(() => {
+      renamePackageJsonName('/non/existent/path', appNameMock);
+    }).not.toThrow();
+  });
 });

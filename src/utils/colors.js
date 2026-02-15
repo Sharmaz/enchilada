@@ -38,7 +38,6 @@ export function setColor(val) {
   if (valSplit.includes('Rspack')) { return colors.rust(val); }
   if (valSplit.includes('Rust')) { return colors.rust(val); }
   if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
-  if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
   if (valSplit.includes('React')) { return colors.react(val); }
 
   return (val);

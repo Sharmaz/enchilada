@@ -14,4 +14,10 @@ describe('Copying Files', () => {
 
     expect(templateFiles.length).toBeGreaterThan(1);
   });
+
+  test('Throws error when source does not exist', () => {
+    expect(() => {
+      copyFilesAndDirectories('/non/existent/path', genPath);
+    }).toThrow('ENOENT');
+  });
 });
