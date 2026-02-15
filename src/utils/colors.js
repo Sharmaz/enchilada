@@ -26,7 +26,7 @@ export function separator(title) {
   return chalk.reset(colors.gray(`${' '.repeat(gutter)}|${' '.repeat(2)}`));
 }
 
-export function setColor (val) {
+export function setColor(val) {
   const valSplit = val.split(' ');
 
   if (val === 'Frontend') { return colors.frontend(val); }
@@ -37,7 +37,6 @@ export function setColor (val) {
   if (valSplit.includes('JavaScript')) { return colors.react(val); }
   if (valSplit.includes('Rspack')) { return colors.rust(val); }
   if (valSplit.includes('Rust')) { return colors.rust(val); }
-  if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
   if (valSplit.includes('TypeScript')) { return colors.typescript(val); }
   if (valSplit.includes('React')) { return colors.react(val); }
 

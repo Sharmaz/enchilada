@@ -11,7 +11,7 @@ describe('App name fuctions', () => {
     const formattedNameFromSpaces = formatAppName(wrongFormatSpaces);
     const formattedNameFromLowDashes = formatAppName(wrongFormatLowDash);
     const formattedNameFromUpperCases = formatAppName(wrongFormatUpperCase);
-  
+
     expect(formattedNameFromSpaces).toBe(appNameMock);
     expect(formattedNameFromLowDashes).toBe(appNameMock);
     expect(formattedNameFromUpperCases).toBe(appNameMock);

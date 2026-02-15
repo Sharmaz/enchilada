@@ -5,13 +5,12 @@ import { execa } from 'execa';
 import app from '../../src/index';
 import { appNameMock, genPath } from '../__mocks__/dataMock';
 
-
 beforeAll(() => rm(genPath, { recursive: true, force: true }));
 afterEach(() => rm(genPath, { recursive: true, force: true }));
 
 describe('Passing arguments to main app', () => {
   test('Passing template and directory', () => {
-    const args = { _: [ appNameMock ], template: 'react' };
+    const args = { _: [appNameMock], template: 'react' };
     app(args);
 
     const packageJson = readFileSync(`${genPath}/package.json`, 'utf8');
@@ -25,7 +24,7 @@ describe('Passing arguments to main app', () => {
     let packageJson;
     try {
       packageJson  = readFileSync(`${genPath}/package.json`, 'utf8');
-    } catch(error) {
+    } catch (error) {
       packageJson = error;
     }
     expect(packageJson.code).toContain('ENOENT');
