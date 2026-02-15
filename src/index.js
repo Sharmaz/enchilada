@@ -12,6 +12,17 @@ import helpMessage from './utils/helpMessage';
 
 const argsv = minimist(argv.slice(2));
 
+const resolveAndInitialize = (template, appName) => {
+  const targetDirectory = path.join(process.cwd(), appName);
+  const sourceDir = path.resolve(
+    fileURLToPath(import.meta.url),
+    '../../templates',
+    `${template}`,
+  );
+
+  initialize(sourceDir, targetDirectory, appName);
+};
+
 const app = async (args) => {
   const templateArg = args.template || args.t;
   const appNameArg = args._[0];
@@ -86,34 +97,14 @@ const app = async (args) => {
         process.exit(0);
       }
 
-      const { template } = templateResponse;
-      const { appName } = appNameResponse;
-      const targetDirectory = path.join(process.cwd(), appName);
-      const sourceDir = path.resolve(
-        fileURLToPath(import.meta.url),
-        '../../templates',
-        `${template}`,
-      );
-
-      initialize(sourceDir, targetDirectory, appName);
-    }
-    catch (err) {
+      resolveAndInitialize(templateResponse.template, appNameResponse.appName);
+    } catch (err) {
       console.error(colors.error(err.message));
     }
   } else {
     try {
-      const template = templateArg;
-      const appName = appNameArg;
-      const targetDirectory = path.join(process.cwd(), appName);
-      const sourceDir = path.resolve(
-        fileURLToPath(import.meta.url),
-        '../../templates',
-        `${template}`,
-      );
-
-      initialize(sourceDir, targetDirectory, appName);
-    }
-    catch (err) {
+      resolveAndInitialize(templateArg, appNameArg);
+    } catch (err) {
       console.error(colors.error(err.message));
     }
   }
