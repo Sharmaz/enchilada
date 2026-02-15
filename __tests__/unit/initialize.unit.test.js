@@ -1,4 +1,4 @@
-import { afterEach, describe } from '@jest/globals';
+import { afterEach, describe, test, expect } from '@jest/globals';
 import { readFileSync, rmSync, mkdirSync } from 'node:fs';
 
 import copyFilesAndDirectories from '../../src/templateCopy';
