@@ -1,6 +1,6 @@
 {
   "name": "create-enchilada",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "A quick way to start your web applications.",
   "main": "index.js",
