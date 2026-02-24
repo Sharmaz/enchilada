@@ -71,4 +71,14 @@ describe('Passing arguments to main app', () => {
     const { stdout } = await execa`node index.js -h`;
     expect(stdout).toContain('Usage: create-enchilada [OPTION]... [DIRECTORY]');
   });
+
+  test('Passing --list', async () => {
+    const { stdout } = await execa`node index.js --list`;
+    expect(stdout).toContain('Available templates:');
+  });
+
+  test('Passing -l', async () => {
+    const { stdout } = await execa`node index.js -l`;
+    expect(stdout).toContain('Available templates:');
+  });
 });

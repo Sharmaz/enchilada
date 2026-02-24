@@ -9,6 +9,7 @@ import { colors, setColor } from './utils/colors';
 import initialize from './initialize';
 import { formatAppName, validateAppName } from './utils/appName';
 import helpMessage from './utils/helpMessage';
+import listMessage from './utils/listMessage';
 
 const argsv = minimist(argv.slice(2));
 
@@ -26,11 +27,16 @@ const resolveAndInitialize = (template, appName) => {
 const app = async (args) => {
   const templateArg = args.template || args.t;
   const appNameArg = args._[0];
-  const { help, h } = args;
+  const { help, h, list, l } = args;
 
   if (help || h) {
     console.info(helpMessage);
     return helpMessage;
+  }
+
+  if (list || l) {
+    console.info(listMessage);
+    return listMessage;
   }
 
   if (!templateArg || !appNameArg) {

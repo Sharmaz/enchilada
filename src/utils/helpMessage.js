@@ -9,6 +9,7 @@ Options:
                             e.g., my-app, would be like ./my-app/
                             the directory should not exist.
   -t, --template NAME       Use a specific template.
+  -l, --list                List all available templates with full stack details, and exit.
   -h, --help                Display a help message, and exit.
 
 Available templates:

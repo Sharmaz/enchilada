@@ -37,6 +37,20 @@ describe('Passing arguments to main app', () => {
     expect(result).toContain('Usage: create-enchilada [OPTION]... [DIRECTORY]');
   });
 
+  test('Passing list', async () => {
+    const args = { _: [], list: true };
+    const result = await app(args);
+
+    expect(result).toContain('Available templates:');
+  });
+
+  test('Passing -l', async () => {
+    const args = { _: [], l: true };
+    const result = await app(args);
+
+    expect(result).toContain('Available templates:');
+  });
+
   test('Passing a invalid template', async () => {
     const { stdout } = await execa`node index.js --template no-template ${appNameMock}`;
     expect(stdout).toContain('Invalid Template');
