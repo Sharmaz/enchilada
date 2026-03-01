@@ -92,7 +92,7 @@ const app = async (args) => {
         {
           type: 'text',
           name: 'appName',
-          message: colors.typescript('Enter your app name'),
+          message: colors.typescript('Enter your app name (or . for current directory)'),
           initial: 'my-app',
           format: (val) => formatAppName(val),
           validate: (val) => validateAppName(val),
