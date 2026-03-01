@@ -1,5 +1,7 @@
 import { expect, beforeAll, afterEach, describe } from '@jest/globals';
 import { rm } from 'node:fs/promises';
+import { mkdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import runTest, { ENTER } from 'cli-prompts-test';
 import { execa } from 'execa';
 import { mainPath, appNameMock, genPath } from '../__mocks__/dataMock';
@@ -42,12 +44,10 @@ describe('prompt messages', () => {
   });
 
   test('prompt not avaliable directory', async () => {
-    await runTest([mainPath], [ENTER, ENTER, ENTER, appNameMock, ENTER]);
-    (async () => {
-      const { exitCode, stdout } = await runTest([mainPath], [ENTER, ENTER, ENTER, appNameMock, ENTER]);
-      expect(exitCode).toBe(0);
-      expect(stdout).toContain('Target directory already exist!');
-    })();
+    mkdirSync(genPath, { recursive: true });
+    const { exitCode, stdout } = await runTest([mainPath], [ENTER, ENTER, ENTER, appNameMock, ENTER]);
+    expect(exitCode).toBe(0);
+    expect(stdout).toContain('Target directory already exist!');
   });
 });
 
@@ -80,5 +80,23 @@ describe('Passing arguments to main app', () => {
   test('Passing -l', async () => {
     const { stdout } = await execa`node index.js -l`;
     expect(stdout).toContain('Available templates:');
+  });
+});
+
+describe('Current directory support', () => {
+  test('prompt shows current directory hint in app name prompt', async () => {
+    const { exitCode, stdout } = await runTest([mainPath], [ENTER, ENTER, ENTER]);
+    expect(exitCode).toBe(0);
+    expect(stdout).toContain('or . for current directory');
+  });
+
+  test('Scaffolding into current directory using . flag', async () => {
+    mkdirSync(genPath, { recursive: true });
+    const { stdout } = await execa('node', [join(mainPath, 'index.js'), '--template', 'vanilla-js', '.'], { cwd: genPath });
+
+    const packageJson = readFileSync(join(genPath, 'package.json'), 'utf8');
+    expect(stdout).toContain('Finished generating your app');
+    expect(stdout).not.toContain('cd .');
+    expect(packageJson).toContain(appNameMock);
   });
 });
