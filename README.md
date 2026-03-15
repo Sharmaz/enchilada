@@ -12,6 +12,8 @@
 <a href="https://github.com/Sharmaz/enchilada/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sharmaz/enchilada" alt="license"></a>
 </p>
 
+`create-enchilada` is a CLI scaffold tool to quickly create web app projects from templates. Run a single command and follow the interactive prompts to pick a template and name your project. Supports React, Vanilla JS, Node/Express and more.
+
 ## Usage
 ### With npm
 ```

@@ -1,8 +1,8 @@
 {
   "name": "create-enchilada",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
-  "description": "A quick way to start your web applications.",
+  "description": "CLI scaffold tool to create web app projects from templates: React, Vanilla JS, Node/Express and more.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -10,9 +10,9 @@
     "dev": "rollup --config --watch",
     "cov:clean": "rimraf .nyc_output && rimraf coverage",
     "cov:unit": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit --colors --detectOpenHandles -c jest.config.unit.js",
-    "test:unit": "npm-run-all cov:clean cov:unit",
+    "test:unit": "npm-run-all cov:clean cov:unit; [ -t 1 ] && stty sane && tput cnorm || true",
     "cov:e2e": "NODE_ENV=e2e NODE_OPTIONS=--experimental-vm-modules jest --forceExit --colors --detectOpenHandles --runInBand -c jest.config.e2e.js",
-    "test:e2e": "NODE_ENV=e2e npm-run-all cov:clean cov:e2e"
+    "test:e2e": "NODE_ENV=e2e npm-run-all cov:clean cov:e2e; [ -t 1 ] && stty sane && tput cnorm || true"
   },
   "repository": {
     "type": "git",
@@ -20,19 +20,23 @@
   },
   "keywords": [
     "cli",
+    "scaffold",
+    "boilerplate",
+    "starter",
+    "template",
+    "create-app",
     "react",
     "javascript",
     "vanilla",
     "typescript",
-    "farm",
     "vite",
     "webpack",
+    "rspack",
     "tailwindcss",
     "eslint",
-    "oxlint",
     "jest",
-    "react testing library",
-    "app",
+    "testing-library",
+    "sequelize",
     "web",
     "node",
     "express"
@@ -40,8 +44,7 @@
   "bin": {
     "create-enchilada": "index.js"
   },
-  "preferGlobal": true,
-  "engines": {
+"engines": {
     "node": ">=20.19.0"
   },
   "files": [
