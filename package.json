@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sharmaz/enchilada.git"
+    "url": "git+https://github.com/Sharmaz/create-enchilada.git"
   },
   "keywords": [
     "cli",
@@ -55,9 +55,9 @@
   "author": "Ivan Robles <contact@ivanrobles.pro>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sharmaz/enchilada/issues"
+    "url": "https://github.com/Sharmaz/create-enchilada/issues"
   },
-  "homepage": "https://github.com/Sharmaz/enchilada#readme",
+  "homepage": "https://github.com/Sharmaz/create-enchilada#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.0",
     "@jest/globals": "^30.0.2",
