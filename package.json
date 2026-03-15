@@ -10,9 +10,9 @@
     "dev": "rollup --config --watch",
     "cov:clean": "rimraf .nyc_output && rimraf coverage",
     "cov:unit": "NODE_OPTIONS=--experimental-vm-modules jest --forceExit --colors --detectOpenHandles -c jest.config.unit.js",
-    "test:unit": "npm-run-all cov:clean cov:unit; stty sane; tput cnorm",
+    "test:unit": "npm-run-all cov:clean cov:unit; [ -t 1 ] && stty sane && tput cnorm || true",
     "cov:e2e": "NODE_ENV=e2e NODE_OPTIONS=--experimental-vm-modules jest --forceExit --colors --detectOpenHandles --runInBand -c jest.config.e2e.js",
-    "test:e2e": "NODE_ENV=e2e npm-run-all cov:clean cov:e2e; stty sane; tput cnorm"
+    "test:e2e": "NODE_ENV=e2e npm-run-all cov:clean cov:e2e; [ -t 1 ] && stty sane && tput cnorm || true"
   },
   "repository": {
     "type": "git",
