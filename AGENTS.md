@@ -48,10 +48,14 @@ npx create-enchilada --template react-dev-typescript my-app
 
 # Scaffold a Node.js REST API
 npx create-enchilada --template node-express my-api
+
+# Scaffold into the current directory (directory must already exist)
+npx create-enchilada --template vanilla-js .
 ```
 
 ## Notes
 
 - The `<project-name>` becomes both the directory name and the `name` field in `package.json`.
-- The target directory must not already exist.
+- Use `.` as `<project-name>` to scaffold into the current directory. The directory must already exist; the parent directory name is used as the `name` in `package.json`.
+- The target directory must not already exist (unless using `.`).
 - After scaffolding, run `cd <project-name> && npm install` to get started.
