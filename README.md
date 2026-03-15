@@ -1,6 +1,6 @@
 <div align="center">
 <p>
-<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchilada-js-logo.svg" width="250" alt="enchiladajs logo"/>
+<img src="https://raw.githubusercontent.com/Sharmaz/create-enchilada/refs/heads/main/media/enchilada-js-logo.svg" width="250" alt="enchiladajs logo"/>
 </p>
 
 # Building apps with JavaScript — as if they were enchiladas!
@@ -8,8 +8,8 @@
 
 <p align="center">
 <a href="https://www.npmjs.com/package/create-enchilada"><img src="https://img.shields.io/npm/v/create-enchilada?logo=npm&color=blue" alt="version"></a>
-<a href="https://github.com/Sharmaz/enchilada/actions/workflows/unit_tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/Sharmaz/enchilada/unit_tests.yml?logo=jest&label=Tests" alt="tests"></a>
-<a href="https://github.com/Sharmaz/enchilada/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sharmaz/enchilada" alt="license"></a>
+<a href="https://github.com/Sharmaz/create-enchilada/actions/workflows/unit_tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/Sharmaz/create-enchilada/unit_tests.yml?logo=jest&label=Tests" alt="tests"></a>
+<a href="https://github.com/Sharmaz/create-enchilada/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sharmaz/create-enchilada" alt="license"></a>
 </p>
 
 `create-enchilada` is a CLI scaffold tool to quickly create web app projects from templates. Run a single command and follow the interactive prompts to pick a template and name your project. Supports React, Vanilla JS, Node/Express and more.
@@ -30,7 +30,7 @@ pnpm create enchilada@latest
 yarn create enchilada
 ```
 
-<img src="https://raw.githubusercontent.com/Sharmaz/enchilada/refs/heads/main/media/enchiladajs@latest.gif"  width="100%"  alt="enchiladajs logo"/>
+<img src="https://raw.githubusercontent.com/Sharmaz/create-enchilada/refs/heads/main/media/enchiladajs@latest.gif"  width="100%"  alt="enchiladajs logo"/>
 </p>
 
 ## CLI Options
